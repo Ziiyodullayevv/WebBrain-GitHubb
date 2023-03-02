@@ -1,50 +1,19 @@
-// '', "", ``
+// String 
 
-// let name = "Webbrain Academy";
+let name = 'Ilya';
 
-// console.log("Welcome " + name + ", IT Center");
-// console.log("Welcome \nto 'Webbrain'");
+console.log(`hello ${1}`); // hello 1 chiqadi string typeda
+console.log(`hello ${"name"}`); //helo name chiqadi stringga ogiradi
+console.log(`hello ${name}`); // hello Ilya chiqadi variableni ( ``) oqiy oladi
 
-// console.log(true);
-// console.log(false);
-// ==============
+// Prefix and Postfix
 
-// null
-// let a;
-// let b = null;
+let a = 1, b = 1; 
 
-// console.log(null === undefined);
-// console.log(null == undefined);
+let c = ++a; // 2 chiqadi
+let d = b++; // 1 chiqadi chunki js single thread
 
-// ==============
-// let a;
-// let b = null;
-// console.log(null + 1);
-// console.log(undefined + 1);
-// console.log(a + 1);
-// console.log(b + 1);
+// Assinment result
 
-// ==============
-// symbols
-// let a = Symbol("text");
-// let b = Symbol("text");
-
-// console.log(b === a);
-// console.log(b == a);
-
-// ==============
-// Object - array, obj, function
-
-let ar = ["Muhammad", 12, "Iqboljon"]; // index
-let obj = { name: "webbrain", status: "IT Center" }; // key
-let func = () => {};
-function test() {
-  console.log(ar[0]);
-  console.log(obj.name);
-}
-
-test();
-console.log(2323);
-console.log(typeof func);
-
-console.log(true)
+let k = 2;
+let x = 1 + (k *= 2) // 5 chiqadi huddi matimatikadagidek ishlaydi
