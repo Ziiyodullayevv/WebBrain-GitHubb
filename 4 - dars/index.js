@@ -40,8 +40,8 @@ for (let i = 2; i <= num; i++) {
         }
     }
     
-    if (tubSon == true) {
-        // console.log(i);
+    if (tubSon) {
+        console.log(i);
     }
 }
 
