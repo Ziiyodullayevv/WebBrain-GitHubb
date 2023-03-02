@@ -47,13 +47,13 @@ for (let i = 2; i <= num; i++) {
 
 // ____________________________________________________________________________________________
 
-let karra = 2;
+let karra = 9;
 
-for(let i = 2; i <= 9; i++) {
+for(let i = 2; i <= karra; i++) {
     console.log('');
     console.log(`${i} karra jadvali`);
     console.log('');
-    
+
     for(let j = 1; j <= 10; j++ ) {
         console.log(`${i} * ${j} = ${i * j}`);
     }
