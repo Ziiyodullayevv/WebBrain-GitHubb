@@ -60,8 +60,39 @@ function getMenu(obj) {
     }
   }
 }
-getMenu(menu);
+// getMenu(menu);
 
 // console.log(menu);
 
 //---------------------------------------------------------------------------------------------
+
+// Object keylarini chiqaring?
+// chiqish;
+// id, name;
+let obj1 = {
+  id: 1,
+  name: "WebBrain",
+};
+
+for (let key in obj1) {
+  // console.log(obj[key]);
+}
+
+// -----------------------------------------------------------------------------------------
+
+// object valuelarining raqamga tenglarini toping ?
+// chiqish
+// id
+
+let obj2 = {
+  id: 1,
+  name: "WebBrain",
+};
+
+for (let key in obj2) {
+  if (typeof obj2[key] === "number") {
+    // console.log(key);
+  } else return 0;
+}
+
+// ---------------------------------------------------------------------------------------
