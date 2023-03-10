@@ -96,3 +96,26 @@ for (let key in obj2) {
 }
 
 // ---------------------------------------------------------------------------------------
+
+// No3
+// object valuelarining boolean tipidagi malumotlrini qaytaring keylari bn biriga ?
+
+// chiqish
+// {   offline:true,
+//     online:true,
+//     individual:false
+// }
+
+let obj3 = {
+  id: 1,
+  name: "WebBrain",
+  offline: true,
+  online: true,
+  individual: false,
+};
+
+for (let key in obj3) {
+  if (typeof obj3[key] === "boolean") {
+    // console.log({ [key]: obj3[key] });
+  } else console.log();
+}
