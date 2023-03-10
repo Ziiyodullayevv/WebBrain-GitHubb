@@ -1,3 +1,4 @@
+// 1 - KATA:
 //user nomli obekt yarating unga name degan key va "John" degan value; surname degan key va "Smith" degan value bering. keyin name ni qimatini "Pete"ga ozgartiring song name ni ochirib tashlang.
 
 const user = {
@@ -12,6 +13,7 @@ delete user.name;
 
 //-----------------------------------------------------------------------------------------
 
+// 2 - KATA:
 // isEmpy degan fuksiya bor shu funksiyaga obekt berilgan da uni ichi bosh bolsa true, aks holda false degan qiymatlarni qaytarsin ?
 
 let schedule = {};
@@ -26,6 +28,7 @@ function isEmpty(obj) {
 
 //-----------------------------------------------------------------------------------------
 
+// 3 - KATA:
 // “Bizda jamoamizning maoshlarini saqlaydigan ob'ektimiz bor: maoshlar = {John: 100, Ann: 130, Pit: 160} uchun hech qanday natija yo'q. barcha maoshlarni yig'ish uchun kodni yozing va o'zgaruvchan summada saqlang. Yuqoridagi misolda 390 bo'lishi kerak. Agar maoshlar bo'sh bo'lsa, natija 0 bo'lishi kerak.
 
 let salaries = {
@@ -45,6 +48,7 @@ function getMoney(obj) {
 console.log(getMoney(salaries));
 //------------------------------------------------------------------------------------------
 
+// 4 - KATA:
 // menu degan obekt berilgan obektning ichidagi number typeda bolgan malumotlarning qiymatini 2 ga kopaytiring ?
 
 let menu = {
@@ -66,6 +70,7 @@ function getMenu(obj) {
 
 //---------------------------------------------------------------------------------------------
 
+// 5 - KATA:
 // Object keylarini chiqaring?
 // chiqish;
 // id, name;
@@ -80,6 +85,7 @@ for (let key in obj1) {
 
 // -----------------------------------------------------------------------------------------
 
+// 6 - KATA:
 // object valuelarining raqamga tenglarini toping ?
 // chiqish
 // id
@@ -97,7 +103,7 @@ for (let key in obj2) {
 
 // ---------------------------------------------------------------------------------------
 
-// No3
+// 7 - KATA:
 // object valuelarining boolean tipidagi malumotlrini qaytaring keylari bn biriga ?
 
 // chiqish
