@@ -21,8 +21,8 @@ let schedule = {};
 function isEmpty(obj) {
   let key = Object.keys(obj).length;
 
-  if (key) return false;
-  else return true;
+  // if (key) return false;
+  // else return true;
 }
 // console.log(isEmpty(schedule));
 
@@ -40,12 +40,12 @@ let salaries = {
 function getMoney(obj) {
   let result = 0;
   for (let key in obj) {
-    if (Object.keys(obj).length) result += obj[key];
-    else return 0;
+    // if (Object.keys(obj).length) result += obj[key];
+    // else return 0;
   }
   return result;
 }
-console.log(getMoney(salaries));
+// console.log(getMoney(salaries));
 //------------------------------------------------------------------------------------------
 
 // 4 - KATA:
@@ -98,7 +98,7 @@ let obj2 = {
 for (let key in obj2) {
   if (typeof obj2[key] === "number") {
     // console.log(key);
-  } else return 0;
+  } else console.log();
 }
 
 // ---------------------------------------------------------------------------------------
@@ -125,3 +125,31 @@ for (let key in obj3) {
     // console.log({ [key]: obj3[key] });
   } else console.log();
 }
+
+// ---------------------------------------------------------------------------------------
+
+// 8 - KATA:
+// object va string berilgan.  string bor bolgan object valuelarining chiqaring
+let obj4 = {
+  id: 1,
+  name: "atirgul",
+  color: "qizil",
+  count: 10,
+  price: "10$",
+};
+//chiqishi
+//atirgul,qizil
+
+function searchValue(obj, str) {
+  for (let key in obj) {
+    if (typeof obj[key] === "string") {
+      if (obj[key].includes(str)) {
+        console.log(obj[key]);
+      } else console.log();
+    } else {
+      console.log();
+    }
+  }
+}
+
+searchValue(obj4, "i");
