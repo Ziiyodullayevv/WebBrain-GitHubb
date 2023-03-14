@@ -2,16 +2,15 @@
 
 function getBinary(num) {
   let binary = num.toString(2).split("");
-  //   let birnaryOne = binary.filter((value) => value == 1);
-  //   let birnaryZero = binary.filter((value) => value == 0);
-  //   return `1 dan ${birnaryOne.length} qatnashgan, 0 dan ${birnaryZero.length}ta qatnashgan`;
 
   let resOne = 0;
   let resZero = 0;
+
   for (let i = 0; i < binary.length; i++) {
     if (binary[i] == 1) resOne += +binary[i];
     else if (binary[i] == 0) resZero += [+binary[i]].length;
   }
+
   return `1 lar ${resOne} ta, 0 dan ${resZero} ta`;
 }
 console.log(getBinary(5));
