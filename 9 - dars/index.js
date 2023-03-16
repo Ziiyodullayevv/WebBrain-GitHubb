@@ -3,14 +3,28 @@
 // 1) check(str1, str2) funksiya yozilsin. Berilgan parametorlar bir-biriga mos yoki umuman mos kelmasligi va qisman mos ekanligini ifodalovchi natija qaytarsin
 
 function check(str1, str2) {
-  //   let compare = str1.localeCompare(str2);
-  let compare = str1.localeCompare(str2);
+  let string = new String(str2);
+  let compare = str1.localeCompare(string);
   if (compare == 1) return "qisman togri";
   else if (compare == -1) return "Mutlaqo teng emas";
   else return "100% teng";
 }
-let compare = check("webbrain", "");
+let compare = check("webbrain", "jscd");
 // console.log(compare);
+console.log(undefined++);
+
+// -------------------------------------------------------------------------
+
+// 2) getCount(str) - function yozilsin. function str dagi harflar sanogini chiqarib bering?
+// Chiqishi str = 'webbrain' --> {w: }
+const getCount = (str) => {
+  let count = {};
+  for (let i = 0; i < str.length; i++) {
+    count[str[i]] ? count[str[i]]++ : (count[str[i]] = 1);
+  }
+  return count;
+};
+// console.log(getCount("webbrain"));
 
 // -------------------------------------------------------------------------
 
