@@ -54,6 +54,18 @@ const getCurrent = (str) => {
 
 // 6) capitilize(str) --> Berilgan stringdagi barcha sozlarni Barchasining birinchi harfini bosh harf bilan yozish kerak?
 
+// 1) usul:
+const capitilize1 = (str) => {
+  let res = "";
+  for (key in str) {
+    if (str[key - 1] === " " || str[key - 1] === undefined)
+      res += str[key].toUpperCase();
+    else res += str[key];
+  }
+  return res;
+};
+console.log(capitilize1("m akram"));
+
 const capitilize = (str) => {
   let res = "";
   let arr = str.split(" ");
@@ -86,7 +98,7 @@ const polendrom = (str) => {
   for (let i = str.length - 1; i >= 0; i--) {
     res += str[i];
   }
-  return res === str;
+  return res.toLowerCase() === str.toLowerCase();
 };
 // console.log(polendrom("nonun"));
 
@@ -94,11 +106,3 @@ const polendrom = (str) => {
 
 // 9) string berilgan uni ziplash kerak?
 // Chiqishi: 'weeebbbrain academyyyy' --> 'we3b3rain academy4'
-
-const getZipper = (str) => {
-  let count = {};
-  for (value of str) {
-  }
-  return;
-};
-console.log(getZipper("webbrain"));
