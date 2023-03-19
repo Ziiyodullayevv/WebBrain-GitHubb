@@ -64,7 +64,7 @@ const capitilize1 = (str) => {
   }
   return res;
 };
-console.log(capitilize1("m akram"));
+// console.log(capitilize1("m akram"));
 
 const capitilize = (str) => {
   let res = "";
@@ -121,6 +121,19 @@ const text = (str) => {
       }
     }
   }
-  return res;
 };
-console.log(text("wwbbraaaaain"));
+// console.log(text("weeeebbbb"));
+
+// -----------------------------------------------------------
+
+function removeDoblicate(str) {
+  let res = "";
+  for (index in str) {
+    if (str[index] === str[index - 1]) {
+    } else {
+      res += str[index];
+    }
+  }
+  return res;
+}   
+console.log(removeDoblicate("weeebbbbrrrraaain"));
