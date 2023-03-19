@@ -47,7 +47,7 @@ const getTotal5 = (arr) => {
   arr.forEach((value) => (res += value));
   return res;
 };
-console.log(getTotal5(numArray));
+// console.log(getTotal5(numArray));
 
 // --------------------------------------------------------------------
 
@@ -63,7 +63,7 @@ const getChar = (arr) => {
   }
   return res;
 };
-console.log(getChar(arrStr));
+// console.log(getChar(arrStr));
 
 // --------------------------------------------------------------------
 
@@ -76,6 +76,23 @@ const num2 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 const isEqual = (arr1, arr2) => {
   return arr1.join("") === arr2.join("");
 };
-console.log(isEqual(num1, num2));
+// console.log(isEqual(num1, num2));
+
+// --------------------------------------------------------------------
+
+// 4 - Masala:
+//
+const lowerCase = ["background-color", "-hover-effects"];
+const camelize = (arr) => {
+  let str = arr.join(" ");
+  console.log(str);
+  let res = "";
+  for (key in str) {
+    if (str[key - 1] === "-") res += str[key].toUpperCase();
+    else res += str[key] + "";
+  }
+  return res.replace(/-/g, "").split(" ");
+};
+// console.log(camelize(lowerCase));
 
 // --------------------------------------------------------------------
