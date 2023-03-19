@@ -50,3 +50,19 @@ const getTotal5 = (arr) => {
 console.log(getTotal5(numArray));
 
 // --------------------------------------------------------------------
+
+// 2 - Masala:
+// ["webbrain", "academy"] - array ichidagi sozlarning har bir belgisining sanogini topish kerak. Natija object korinishida bolsin.
+const arrStr = ["webbrain", "academy"];
+const getChar = (arr) => {
+  let res = {};
+  let str = arr.join("");
+
+  for (value of str) {
+    res[value] ? res[value]++ : (res[value] = 1);
+  }
+  return res;
+};
+console.log(getChar(arrStr));
+
+// --------------------------------------------------------------------
