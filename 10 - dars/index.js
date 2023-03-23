@@ -115,11 +115,54 @@ const tartiblash = (arr) => {
   let res = arr.sort((a, b) => a.name.localeCompare(b.name));
   users = res;
 };
-tartiblash(users);
-console.log(users);
-
-let nu = [1, 2, 3];
-let res = nu.map((value) => console.log(value));
-// console.log(res);
+// tartiblash(users);
 
 // -------------------------------------------------------------------
+
+// 2000 yildan odingi mashinalar rayhatini chiqaring?
+
+const getYearOld = (data) => {
+  let res = data.filter((value) => value.year < 2000);
+  users = res;
+};
+// getYear(users);
+
+// ------------------------------------------------------------------
+
+// 2010 yildan keyingi mashinalar royhatini chiqaring ?
+const getYearNew = (data) => {
+  let res = data.filter((value) => value.year > 2010);
+  users = res;
+};
+// getYearNew(users);
+
+// ------------------------------------------------------------------
+
+// engine kuchiga qarab malumotlarni tartiblang ?
+
+const getEngine = (data) => {
+  let res = data.sort((a, b) => b.engine - a.engine);
+  users = res;
+};
+// getEngine(users);
+
+// -----------------------------------------------------------------
+
+// Chiqarilgan yiliga qarab sartirovka qiling ?
+
+const getYearSort = (data) => {
+  let res = data.sort((a, b) => a.year - b.year);
+  users = res;
+};
+// getYearSort(users);
+
+// -----------------------------------------------------------------
+
+// 2000 yildan oldin chiqqan mashinalarga status : eski degan malumotni qoshing ?
+
+const setData = (data) => {
+  let res = "hover";
+};
+setData(users);
+
+console.log(users);
