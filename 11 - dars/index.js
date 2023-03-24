@@ -85,3 +85,18 @@ const setData2 = (data) => {
 // ------------------------------------------------------------------
 
 // 2010 - 2022 yillarda chiqgan mashinalarga status : "Yangi" degan malumot qoshing ?
+
+const setData3 = (data) => {
+  let res = data.map((value) =>
+    value.year < 2022 && value.year > 2010
+      ? { ...value, status: "Yangi" }
+      : value
+  );
+
+  users = res;
+};
+setData3(users);
+
+// ------------------------------------------------------------------
+
+console.log(users);
