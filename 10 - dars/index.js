@@ -157,12 +157,4 @@ const getYearSort = (data) => {
 // getYearSort(users);
 
 // -----------------------------------------------------------------
-
-// 2000 yildan oldin chiqqan mashinalarga status : eski degan malumotni qoshing ?
-
-const setData = (data) => {
-  let res = "hover";
-};
-setData(users);
-
 console.log(users);
