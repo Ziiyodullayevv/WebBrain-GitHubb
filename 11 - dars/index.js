@@ -56,4 +56,17 @@ const getYearSort = (data) => {
 // getYearSort(users);
 
 // -----------------------------------------------------------------
+
+// 2000 - yildan oldin chiqgan mashinalarga status : 'eski' deb qoshing ?
+
+const setData = (data) => {
+  let res = data.map((value) => {
+    return value.year < 2000 ? { ...value, status: "eski" } : value;
+  });
+  users = res;
+};
+// setData(users);
+
+// -----------------------------------------------------------------
+
 console.log(users);
