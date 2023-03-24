@@ -69,4 +69,19 @@ const setData = (data) => {
 
 // -----------------------------------------------------------------
 
-console.log(users);
+// 2000 - 2010 yillarda chiqgan mashinlarga status : "O'rta" degan malumot qoshing ?
+
+const setData2 = (data) => {
+  let res = data.map((value) =>
+    value.year < 2010 && value.year > 2000
+      ? { ...value, status: "O'rta" }
+      : value
+  );
+
+  users = res;
+};
+// setData2(users);
+
+// ------------------------------------------------------------------
+
+// 2010 - 2022 yillarda chiqgan mashinalarga status : "Yangi" degan malumot qoshing ?
