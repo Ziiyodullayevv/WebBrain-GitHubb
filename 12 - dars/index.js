@@ -55,3 +55,21 @@ const getDoubleCate = (str) => {
 // console.log(getDoubleCate(str3));
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// 4 - Masala:
+// String ichidagi raqamlarni aniqlang ?
+
+let str4 = "Web44barin Aca48demy";
+
+const getNum = (str) => {
+  let res = "";
+
+  for (value of str) {
+    if (+value) res += value;
+  }
+
+  return +res;
+};
+// console.log(getNum(str4));
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
