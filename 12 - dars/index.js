@@ -88,6 +88,19 @@ const getDoubleStr = (str) => {
 
   return res;
 };
-console.log(getDoubleStr(str5));
+// console.log(getDoubleStr(str5));
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// 6 - masala:
+// Berilgan soz palendrom yoki palendrom emasligini aniqlang ?
+
+let str6 = "kiyik";
+
+const getPolendrom = (str) => {
+  let polindrom = str.split("").reverse().join("");
+  return polindrom === str;
+};
+// console.log(getPolendrom(str6))
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
