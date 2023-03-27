@@ -123,6 +123,51 @@ const getStrCharNum = (str) => {
 
   return res;
 };
-// console.log(getStrCharNum(str8));
+console.log(getStrCharNum(str8));
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// 9 - Masala:
+// Stringni ziplang?
+
+let str9 = "webbraaain Accaaademyyyy";
+
+const strZipper = (str) => {
+  let res = "";
+  let count = 1;
+
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === str[i + 1]) count++;
+    else {
+      res += str[i];
+      if (count > 1) {
+        res += count;
+        count = 1;
+      }
+    }
+  }
+
+  return res;
+};
+// console.log(strZipper(str9));
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// -------------------- Object Boyicha Masalalar:
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// 1 - Masala:
+// Object keylarini toping ?
+
+let obj1 = { title: "Webbrain", age: 2 };
+
+const getObjKeys = (obj) => {
+  for (key in obj) {
+    console.log(key);
+  }
+};
+
+console.log(getObjKeys(obj1));
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
