@@ -4,17 +4,19 @@
 // Berilgan stringda nechta katta harf va nechta kichik harf borligini aniqlang ?
 
 let str1 = "Webbrain Academy";
+const getStr = (str) => {
+  let large = 0;
+  let lower = 0;
 
-const getDouble = (str) => {
-  let res = "";
-
-  for (value of str) {
-    res += value + value;
+  for (v of str) {
+    if (v === v.toUpperCase() && v !== " ") large += v.length;
+    else if (v === v.toLowerCase() && v !== " ") lower += v.length;
   }
 
+  let res = `Katta harflar soni: ${large} ta, kichik harflar soni: ${lower} ta`;
   return res;
 };
-// console.log(getDouble(str1));
+// console.log(getStr(str1));
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -34,3 +36,22 @@ const getAt = (str) => {
 // console.log(getAt(str2));
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// 3 - Masala:
+// Dublicate bolgan harflarni ochiring ?
+
+let str3 = "weeebbbbbbbrrrrraaaiiiiinn";
+
+const getDoubleCate = (str) => {
+  let res = "";
+
+  for (let i = 0; i < str.length; i++) {
+    if (str[i + 1] === str[i]);
+    else res += str[i];
+  }
+
+  return res;
+};
+// console.log(getDoubleCate(str3));
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
