@@ -73,3 +73,21 @@ const getNum = (str) => {
 // console.log(getNum(str4));
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// 5 - Masala:
+// String berilgan stringning har bir belgisini 2marta takrorlang ?
+
+let str5 = "Webbrain";
+
+const getDoubleStr = (str) => {
+  let res = "";
+
+  for (value of str) {
+    res += value + value;
+  }
+
+  return res;
+};
+console.log(getDoubleStr(str5));
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
