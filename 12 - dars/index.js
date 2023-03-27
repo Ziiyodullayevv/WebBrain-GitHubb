@@ -1,5 +1,7 @@
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+// -------------------- String Boyicha Masalalar :
+
 // 1 - Masala:
 // Berilgan stringda nechta katta harf va nechta kichik harf borligini aniqlang ?
 
@@ -104,3 +106,23 @@ const getPolendrom = (str) => {
 // console.log(getPolendrom(str6))
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// 8 - Masala:
+// Stringda qatnashgan belgilar sanogini toping ?
+
+let str8 = "webbrain academy";
+
+const getStrCharNum = (str) => {
+  let res = {};
+
+  for (value of str) {
+    res[value] ? res[value]++ : (res[value] = 1);
+  }
+
+  return res;
+};
+// console.log(getStrCharNum(str8));
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
