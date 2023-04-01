@@ -15,7 +15,7 @@ const getMinut = (info) => {
     if(date.getHours() >= 12) sign = 'PM';
     else sign = 'AM';
 
-    // minut 10 dan kichik boganda 0 ga birlashtirib qoyish;
+    // minut 10 dan kichik bo'lganda 0 ga birlashtirib qoyish;
     let min = menuts < 10 ? '0' + menuts : menuts;
 
     // oy nomlari;
