@@ -102,6 +102,8 @@ function getCached(getData) {
 // users.getData = getCached(users.getData)
 users.getData() // Bu qism buttonga biriktirilishi kerak aslida;
 
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 
 
