@@ -64,7 +64,6 @@ const getDoubleCate = (str) => {
 let str4 = "Web44barin Aca48demy";
 
 const getNum = (str) => {
-  let res = "";
 
   for (value of str) {
     if (+value) res += value;
@@ -72,7 +71,27 @@ const getNum = (str) => {
 
   return +res;
 };
-// console.log(getNum(str4));
+
+  // 7 - Masala:
+  // Berilgan stringdagi harflar soni bir biriga teng yoki teng emasligini aniqlang. Tartib muhim emas.
+  
+  let str7a = "web";
+  let str7b = "ewb";
+  
+  const getAmount = (str1, str2) => {
+    let a = str1
+      .split("")
+      .sort((a, b) => a.localeCompare(b))
+      .join("");
+  
+    let b = str2
+      .split("")
+      .sort((a, b) => a.localeCompare(b))
+      .join("");
+  
+    return a === b;
+  };
+  // console.log(getAmount(str7a, str7b));
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -106,6 +125,28 @@ const getPolendrom = (str) => {
 // console.log(getPolendrom(str6))
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+// 7 - Masala:
+// Berilgan stringdagi harflar soni bir biriga teng yoki teng emasligini aniqlang. Tartib muhim emas.
+
+let str7a = "web";
+let str7b = "ewb";
+
+const getAmount = (str1, str2) => {
+  let a = str1
+    .split("")
+    .sort((a, b) => a.localeCompare(b))
+    .join("");
+
+  let b = str2
+    .split("")
+    .sort((a, b) => a.localeCompare(b))
+    .join("");
+
+  return a === b;
+};
+// console.log(getAmount(str7a, str7b));
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -197,7 +238,7 @@ const getObjAgeTotal = (obj) => {
 
   return res;
 };
-console.log(getObjAgeTotal(obj2));
+// console.log(getObjAgeTotal(obj2));
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -219,4 +260,131 @@ const getBoolean = (obj) => {
   }
   return res;
 };
-// console.log(getBoolean(obj));
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// ----------------------- Array Boyicha Masalalar:
+
+// 1 - Masala:
+//Array ichidagi doublikat sonlarni chiqarib yuboring? new Setsiz!
+
+let arr1 = [2, 2, 2, 2, 4, 4, 4, 5, 6, 7];
+
+const getDoublicateArr = (arr) => {
+  let res = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] !== arr[i + 1]) res.push(arr[i]);
+  }
+  return res;
+};
+// console.log(getDoublicateArr(arr1));
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// 2 - Masala:
+// Arraylarni bir-biriga taqqoslang?
+
+let arr2 = [1, 2, 3];
+let arr3 = [1, 2, 3];
+
+const getComporasionArr = (arr1, arr2) => {
+  let oneArr = arr1.join("");
+  let twoArr = arr2.join("");
+
+  return oneArr === twoArr;
+};
+// console.log(getComporasionArr(arr2, arr3));
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// 3 - Masala:
+// Array ichidagi ikki honali sonlarni chiqaring ?
+
+let arr4 = [1, 65, 4, 67, 567];
+
+const getTwoRoom = (arr) => {
+  let res = [];
+  let strArr = arr.join(" ").split(" ");
+
+  for (value of strArr) {
+    if (value.length === 2) res.push(+value);
+  }
+  return res;
+};
+// console.log(getTwoRoom(arr4));
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// -------------------------- Advenced Homeworks:
+// [2,3,2,4,5,2,3]
+// [2,3,2,1,2,3]
+// [2,2,1,2]
+// [1,2]
+// [1]
+// Berilgan Array shu korinishda chiqishi kerak ?
+
+let arr5 = [2, 3, 2, 4, 5, 2, 3];
+
+const arrTwoMax = (arr) => {
+  for (value of arr) {
+    let sortArr = arr.sort((a, b) => a - b);
+    let max = sortArr.pop() - sortArr.pop();
+
+    sortArr.push(max);
+
+    let total = sortArr.filter((value) => value);
+    console.log(total);
+  }
+};
+arrTwoMax(arr5);
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+let num = 5766;
+console.log(num.toString(2));
+
+const getBinary = (num) => {
+  biniry = '000110010';
+  let count = 0;
+  let res = 0;
+  let isStartCount = false;
+
+  for (value of biniry) {
+    if (value == "1") {
+      res = count > res ? count : res;
+      count = 0;
+      isStartCount = true;
+    } else if (isStartCount) {
+      count++;
+    }
+  }
+  return res;
+};
+console.log(getBinary(num));
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+let array = [2, 4, 5, 3, 1,0];
+
+function processArray(arr) {
+  while (arr.length >= 2) {
+    // Arraydagi eng katta 2 ta sonni topish
+    let sortedArr = [...arr].sort((a, b) => b - a);
+    let max1 = sortedArr[0];
+    let max2 = sortedArr[1];
+
+    // Ularning ayirmasini hisoblash
+    let getminus = max1 - max2;
+
+    // Eng katta 2 ta sonni arraydan olib tashlash
+    arr = arr.filter((element) => element !== max1 && element !== max2);
+
+    // Ayirmasini arrayga qo'shish;
+    if(getminus !== 0) {
+      arr.push(getminus)
+    }
+    console.log(arr.filter(value => value));
+  }
+}
+processArray(array);
