@@ -159,3 +159,5 @@ user1.fullName(); // Akobir Ziyodullayev;
 user2.fullName(); // Boysoatov Asilbek;
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~``
+
+// user.fullName()
