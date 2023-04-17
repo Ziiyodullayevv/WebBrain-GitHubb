@@ -8,7 +8,7 @@ console.log(`hello ${name}`); // hello Ilya chiqadi variableni ( ``) oqiy oladi
 
 // Prefix and Postfix
 
-let a = 1, b = 1; 
+let a = 1, b = 1;
 
 let c = ++a; // 2 chiqadi
 let d = b++; // 1 chiqadi chunki js single thread

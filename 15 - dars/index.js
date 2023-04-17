@@ -26,26 +26,29 @@
 
 // };
 
-// let list = [
-//     { id: 1, name: "eshmat", title: 'seo' },
-//     { id: 2, name: 'toshmat', title: 'leo' },
-//     { id: 3, name: "eshmat", title: 'seo' },
-//     { id: 5, name: 'aqlbek', title: 'leo' },
-//     { id: 4, name: 'shosha', title: 'leo' }
-// ];
+let list = [
+    { id: 1, name: "eshmat", title: 'seo' },
+    { id: 2, name: 'toshmat', title: 'leo' },
+    { id: 3, name: "nurmat", title: 'seo' },
+    { id: 4, name: 'adiba', title: 'leo' },
+    { id: 5, name: 'Aqida', title: 'john' },
+    { id: 8, name: 'Luqmon', title: 'number' },
+    { id: 9, name: 'Akbar', title: 'number' }
+];
 
-// // Output: 
+// Output: 
 
-// let resCount = {
-//     seo: [
-//         { id: 1, name: "eshmat", title: 'seo' },
-//         { id: 2, name: 'toshmat', title: 'leo' },
-//     ],
-//     leo: [
-//         { id: 2, name: 'toshmat', title: 'leo' },
-//         { id: 5, name: 'Toshmat', title: 'leo' },
-//     ]
-// };
+let resCount = {};
+
+for (let item of list) {
+    if (resCount[item.title]) {
+        resCount[item.title].push(item);
+    } else {
+        resCount[item.title] = [item];
+    }
+}
+
+console.log(resCount);
 
 
 
@@ -106,19 +109,19 @@
 
 // gettter and setter:
 
-let users = {
-    name: 'Akobir',
-    lastName: 'Ziyodullayev',
-    get fullName() {
-        return `${this.name} ${this.lastName}`;
-    },
-    set fullName({ name, lastName }) {
-        this.name = name;
-        this.lastName = lastName;
-    }
-};
-// setter orqali fullName ga qiymat biriktirilmoqda:
-users.fullName = { name: 'Zuhriddin', lastName: 'Bahriddinov' };
+// let users = {
+//     name: 'Akobir',
+//     lastName: 'Ziyodullayev',
+//     get fullName() {
+//         return `${this.name} ${this.lastName}`;
+//     },
+//     set fullName({ name, lastName }) {
+//         this.name = name;
+//         this.lastName = lastName;
+//     }
+// };
+// // setter orqali fullName ga qiymat biriktirilmoqda:
+// users.fullName = { name: 'Zuhriddin', lastName: 'Bahriddinov' };
 
 // console.log(users.fullName);
 
@@ -126,38 +129,47 @@ users.fullName = { name: 'Zuhriddin', lastName: 'Bahriddinov' };
 
 // __proto__ bilan ishlash:
 
-let user1 = { name: 'Akobir' };
-// let user2 = { title: 'Zuhriddin' };
+// let user1 = { name: 'Akobir' };
+// // let user2 = { title: 'Zuhriddin' };
 
-user1.__proto__ = user2;
+// user1.__proto__ = user2;
 
-console.log(user1.title); // Zuhriddin;
+// console.log(user1.title); // Zuhriddin;
 
-user1.__proto__ = null;
+// user1.__proto__ = null;
 
-console.log(user1.title); // undefined;
+// console.log(user1.title); // undefined;
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 // prototypega method yozish:
 
-let user1 = {
-    name: 'Akobir',
-    lastName: 'Ziyodullayev',
-};
+// let user1 = {
+//     name: 'Akobir',
+//     lastName: 'Ziyodullayev',
+// };
 
-let user2 = {
-    name: 'Asilbek',
-    lastName: 'Boysoatov',
-};
+// let user2 = {
+//     name: 'Asilbek',
+//     lastName: 'Boysoatov',
+// };
 
-Object.prototype.fullName = function () {
-    console.log(this.name, this.lastName);
-}
+// Object.prototype.fullName = function () {
+//     console.log(this.name, this.lastName);
+// }
 
-user1.fullName(); // Akobir Ziyodullayev;
-user2.fullName(); // Boysoatov Asilbek;
+// user1.fullName(); // Akobir Ziyodullayev;
+// user2.fullName(); // Boysoatov Asilbek;
 
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~``
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-// user.fullName()
+// let obj = {
+//     name: 'akobir',
+//     fullName() {
+//         console.log(this.name);
+//     }
+// };
+
+// console.log(obj.fullName = 'webbrain');
+// console.log(new Number(3) === 3);
+
